@@ -1,12 +1,12 @@
 import obspython as obs
 
 setting_files = "scene_settings.json"
-
+scene_name = "シーン"
 def save_scene_button(props, prop):
         test = obs.obs_data_create()
         if obs.obs_data_save_json(test,setting_files):
                 print("シーン設定が保存されました")
-                print(obs.obs_data_get_json(test))
+                # print(obs.obs_data_get_json(test))
         else:
                 print("シーンの保存が出来ませんでした")
         obs.obs_data_release(test)
